@@ -1,0 +1,25 @@
+{
+  "name": "assign2.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-flash-notification": "^0.4.0",
+    "express-session": "^1.15.2",
+    "mongoose": "^4.9.6",
+    "mongoose-sequence": "^3.2.0",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

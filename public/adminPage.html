@@ -1,0 +1,67 @@
+
+  
+<div ng-init="question.name='';question.type='';question.option1='';question.option2='';question.option3='';question.option4='';question.answer=''">
+  <h1>welcome Admin</h1>
+<table class="table">
+<thead><tr>
+ <th>Question</th>
+ <th>type</th>
+ <th>options</th>
+ <th>answer</th>
+ <th>action</th>
+</tr></thead>
+
+<tbody>
+<tr>
+<td><input class="form-control" ng-model="question.name"></td>
+<td><select ng-model="question.type" ng-options="x for x in type"></td>
+<td>
+<table><tr>
+<td><input class="form-control" ng-model="question.option1"></td>
+<td><input class="form-control" ng-model="question.option2"></td>
+<td><input class="form-control" ng-model="question.option3"></td>
+<td><input class="form-control" ng-model="question.option4"></td>
+</tr></table>
+</td>
+
+<td><input class="form-control" ng-model="question.answer"></td>
+
+<td>
+<table><tr>
+
+<td><button class="btn btn-primary" ng-click="saveQuestion()" ng-show="!updateButtonBoolean">save</button>&nbsp;</td>
+
+<td><button class="btn btn-info" ng-click="updateQuestion()" ng-show="updateButtonBoolean">update</button>&nbsp;</td>
+
+<td><button class="btn btn-warning" ng-click="cancelQuestion()">cancel</button>&nbsp;</td>
+
+</tr></table>
+</td>
+</tr>
+
+<tr><td><p ng-bind="message" style="color: red"><p></td></tr>
+<tr ng-repeat="data in dataList"><td>{{data.question}}</td><td>{{data.type}}</td>
+
+<td>
+ <table><tr>
+ <td>{{data.options[0]}}</td>
+ <td>&nbsp;&nbsp;</td>
+  <td> {{data.options[1]}}</td>
+  <td>&nbsp;&nbsp;</td>
+   <td> {{data.options[2]}}</td>
+   <td>&nbsp;&nbsp;</td>
+    <td> {{data.options[3]}}</td>
+ </tr></table>
+</td>
+
+<td>{{data.answer}}</td>
+
+<td><button class="btn btn-danger" ng-click="removeQuestion(data.id)">remove</button></td>
+
+<td><button class="btn btn-warning" ng-click="editQuestion($index)">edit</button></td>
+
+</tr></tbody>
+</table> 
+
+</div>
+

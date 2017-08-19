@@ -1,0 +1,20 @@
+
+<div>
+<h1 class="well well-sm">Registration Form</h1>
+  <form ng-submit="submit()">
+    Name:<br>
+    <input type="text" class="form-control" ng-model="user.name" required><br>
+
+    password:<br>
+    <input type="password" class="form-control" ng-model="user.password" required><br>
+
+    Role:<br><select ng-model="user.role" ng-options="x for x in role">
+</select>
+
+   <br><br><button type="submit" class="btn btn-primary" >Register</button>
+  </form>
+  
+  <p ng-bind="message" style="color: red"></p>
+  </div>
+
+
